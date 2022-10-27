@@ -252,29 +252,6 @@ Std_ReturnType convert_uint8_to_string(uint8 value, uint8 str[]){
         errorState = E_NOT_OK;
     }
     else{
-        /*
-        if(value > 99){
-            counterOne_str[2] = (value%10 + 48);
-            counterOne_str[1] = ((value/10 - (value/100)*10) + 48);
-            counterOne_str[0] = (value/100 + 48);
-        }
-        else if(value > 9){
-            counterOne_str[2] = (value%10 + 48);
-            counterOne_str[1] = (value/10 + 48);
-            counterOne_str[0] = '0';
-        }
-        else{
-            counterOne_str[2] = (value%10 + 48);
-            counterOne_str[1] = '0';
-            counterOne_str[0] = '0';
-        }
-        counterOne_str[3] = '\0';
-
-        for(i = 0; i < 4; i++){
-           *str = counterOne_str[i];
-           str++;
-        } 
-        */
         memset((char *)str, '\0', 4);
         sprintf(str, "%i", value);
     }    
